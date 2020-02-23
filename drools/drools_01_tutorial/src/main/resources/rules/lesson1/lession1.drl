@@ -1,0 +1,22 @@
+package rules.lesson1
+
+// list any import classes here
+import com.allin.drools.dmo.Account
+import com.allin.drools.util.LogHelper
+
+
+// declare any global variables here
+global LogHelper log
+
+
+rule "lesson1-rule1"
+  when
+    Account()
+  then
+    log.log("hello world");
+end
+
+rule "lesson1-rule2"
+  when
+  then
+end

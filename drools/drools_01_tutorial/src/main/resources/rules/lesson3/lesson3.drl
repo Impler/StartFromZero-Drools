@@ -1,0 +1,27 @@
+package rules.lesson3
+
+import com.allin.drools.dmo.CashFlow
+import com.allin.drools.dmo.PrivateAccount
+import com.allin.drools.util.LogHelper
+
+global LogHelper log
+
+rule "in"
+  when
+    CashFlow(type in (CashFlow.INCOMING, CashFlow.OUTGOING))
+  then
+    log.log("the cashFlow is a incoming or a outgoing");
+end
+
+rule "nested accessor"
+  when
+    PrivateAccount(owner.name == "jack")
+  then
+    log.log("this is jack's account");
+end
+
+rule ""
+  when
+  then
+    log.log("hhhh");
+end

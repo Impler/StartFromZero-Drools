@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+
+  <!-- hello world rule -->
+  <kbase name="lesson1-rules" packages="rules.lesson1">
+    <ksession name="ksession-lesson1" />
+  </kbase>
+
+  <!-- rule 数据绑定 -->
+  <kbase name="lesson2-rules" packages="rules.lesson2">
+    <ksession name="ksession-lesson2" />
+  </kbase>
+
+  <!-- rule 事实约束 -->
+  <kbase name="lesson3-rules" packages="rules.lesson3">
+    <ksession name="ksession-lesson3" />
+  </kbase>
+</kmodule>

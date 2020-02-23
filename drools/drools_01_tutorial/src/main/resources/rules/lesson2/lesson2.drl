@@ -1,0 +1,21 @@
+package rules.lesson2
+
+import com.allin.drools.dmo.CashFlow
+import com.allin.drools.dmo.Account
+import com.allin.drools.dmo.AccountingPeriod
+import com.allin.drools.util.LogHelper
+
+global LogHelper log;
+
+// 收入统计
+rule "INCOMING Rule"
+  when
+    // 绑定属性 $date
+    $cash: CashFlow(type == CashFlow.INCOMING, $date : this.mvtDate)
+    // 绑定对象 $acc
+    $acc: Account(accountNo.equals($cash.accountNo))
+    $p: AccountingPeriod(endDate >= $date, startDate <= $date)
+  then
+    $acc.setBalance($acc.getBalance() + $cash.getAmount());
+    log.log($acc.toString());
+end
