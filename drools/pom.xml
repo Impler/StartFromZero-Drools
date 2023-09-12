@@ -14,7 +14,7 @@
 
   <properties>
 
-    <version.drools-core>6.5.0.Final</version.drools-core>
+    <version.drools-core>7.69.0.Final</version.drools-core>
     <version.lombok>1.18.0</version.lombok>
     <version.junit>5.5.0</version.junit>
     <version.slf4j-api>1.7.25</version.slf4j-api>
